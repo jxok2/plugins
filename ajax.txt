@@ -1,0 +1,28 @@
+
+
+		Ajax
+
+
+getAjax()
+{
+	var ajax = null;
+	if(window.XMLHttpRequst)
+	{
+		ajax = new XMLHttpRequst();
+	}
+	else if(window.ActiveXObject)
+	{
+		ajax=new ActiveXObject("Microsoft.XMLHttp");
+	}
+	return ajax;
+}
+
+
+function sendAjax()
+{
+	var ajax = getAjax();
+	var url ="welcom.php";
+	ajax.onreadystatechanged=function(){};
+	ajax.open("GET",url,true);
+	ajax.send(null);
+}
