@@ -1,0 +1,6 @@
+1 window.location.href="jb51.jsp?backurl="+window.location.href;
+2 window.history.back(-1); 
+3 window.navigate("jb51.jsp"); 
+4 self.location='jb51.htm'; 
+5 top.location='jb51.jsp'; 
+6 window.open('http://www.ddhbb.com/blog/guestbook.asp','','height=500,width=611,scrollbars=yes,status=yes') 
