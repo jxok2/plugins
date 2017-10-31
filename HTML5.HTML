@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function drag(ev)
+{
+	ev.dataTransfer.setData('Text',ev.target.id);
+}
+
+function drop(ev)
+{
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData('Text');
+	ev.target.appendChild(document.getElementById(data));
+}
+
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+</script>
+</head>
+<body>
+<hr/>
+视频区：<p>
+<video width="320" height="240" controls="controls">
+  <source src="\e:\HTML5素材\mov_bbb.ogg" type="video/ogg">
+  <!--<source src="movie.mp4" type="video/mp4">-->
+Your browser does not support the video tag.
+</video>
+ <!--<script type="text/javascript">
+	window.open("http://www.baidu.com/");
+</script>-->
+<HR></HR>
+拖放区：<p>
+<div id='div1' ondrop='drop(event)' ondragover='allowDrop(event)' width='100' height='100' border='5' style='background:#334455'></div>
+<img id='drag1' src='\e:\HTML5素材\4.gif' draggable='true' ondragstart='drag(event)'/>
+<hr>
+HTML５表单<p>
+email:<input type='email'><p>
+url:<input type='url'><p>
+number:<input type="number" name="points" min="1" max="10" /><p>
+range:<input type="range" name="points" min="1" max="10" /><p>
+<p>
+日期选择器(firefox不支持)：<p>
+date:<input type='date'><p>
+month:<input type='month'><p>
+week:<input type='week'><p>
+time:<input type='time'><p>
+datetime:<input type='datetime'><p>
+datetime-local:<input type='datetime-local'><p>
+<p>
+search:<input type='search'><p>
+</body>
+</html>
